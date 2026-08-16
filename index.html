@@ -91,6 +91,8 @@ tailwind.config = {
   @keyframes itemIn { from { opacity:0; transform: translateY(16px);} to { opacity:1; transform: translateY(0);} }
 
   #mobileMenu { transition: transform .4s cubic-bezier(.22,.7,.3,1); }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .animate-marquee { animation: marquee 35s linear infinite; }
 </style>
 </head>
 <body class="antialiased">
@@ -99,7 +101,7 @@ tailwind.config = {
 <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
   <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-8 h-16 md:h-20">
     <a href="#home" class="flex items-center gap-2.5">
-      <span class="w-9 h-9 rounded-full bg-gradient-to-br from-haldi to-spice flex items-center justify-center text-white font-serif font-bold text-lg shadow-lg">K</span>
+      <img src="logo.png" alt="Kulcha Theka Logo" class="w-10 h-10 rounded-full shadow-lg border-2 border-white/20">
       <span class="font-serif text-xl md:text-2xl font-semibold tracking-tight" id="logoText">Kulcha Theka</span>
     </a>
     <div class="hidden lg:flex items-center gap-8 text-sm font-medium" id="navLinks">
@@ -179,6 +181,34 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ================= LOCATIONS MARQUEE ================= -->
+<div class="bg-spice text-cream/90 py-3 overflow-hidden whitespace-nowrap relative z-10 border-y border-spicedark shadow-inner">
+  <div class="animate-marquee inline-block text-sm md:text-base font-semibold tracking-wide">
+    <span class="mx-3 md:mx-5">📍 Zirakpur</span> •
+    <span class="mx-3 md:mx-5">📍 Mohali</span> •
+    <span class="mx-3 md:mx-5">📍 Yamunanagar</span> •
+    <span class="mx-3 md:mx-5">📍 Jagadhri</span> •
+    <span class="mx-3 md:mx-5">📍 Kurukshetra</span> •
+    <span class="mx-3 md:mx-5">📍 Ludhiana</span> •
+    <span class="mx-3 md:mx-5">📍 Haridwar</span> •
+    <span class="mx-3 md:mx-5">📍 Karnal</span> •
+    <span class="mx-3 md:mx-5">📍 Dehradun</span> •
+    <span class="mx-3 md:mx-5">📍 Ambala</span> •
+    <span class="mx-3 md:mx-5">📍 Faridabad</span> •
+    <span class="mx-3 md:mx-5">📍 Zirakpur</span> •
+    <span class="mx-3 md:mx-5">📍 Mohali</span> •
+    <span class="mx-3 md:mx-5">📍 Yamunanagar</span> •
+    <span class="mx-3 md:mx-5">📍 Jagadhri</span> •
+    <span class="mx-3 md:mx-5">📍 Kurukshetra</span> •
+    <span class="mx-3 md:mx-5">📍 Ludhiana</span> •
+    <span class="mx-3 md:mx-5">📍 Haridwar</span> •
+    <span class="mx-3 md:mx-5">📍 Karnal</span> •
+    <span class="mx-3 md:mx-5">📍 Dehradun</span> •
+    <span class="mx-3 md:mx-5">📍 Ambala</span> •
+    <span class="mx-3 md:mx-5">📍 Faridabad</span>
+  </div>
+</div>
+
 <!-- ================= ABOUT ================= -->
 <section id="about" class="py-20 md:py-28 phulkari">
   <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -193,7 +223,7 @@ tailwind.config = {
     </div>
     <div class="reveal">
       <p class="divider-motif text-spice font-semibold tracking-[0.25em] uppercase text-xs mb-5"><span>Our Story</span></p>
-      <h2 class="font-serif text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-6">The Taste of Amritsar, Right Here in Mohali</h2>
+      <h2 class="font-serif text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-6">The Taste of Amritsar, Across North India</h2>
       <p class="text-masala/70 leading-relaxed mb-5">
         Kulcha Theka is a pure vegetarian restaurant devoted to one craft — the perfect <strong class="text-masala">Amritsari stuffed Kulcha</strong>. Crisp on the outside, generously stuffed inside, roasted fresh in the tandoor and finished with a slab of melting butter. Served alongside our slow-cooked Chole, fluffy Bhature and crispy Tikkis.
       </p>
@@ -431,7 +461,7 @@ tailwind.config = {
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
         <div class="flex items-center gap-2.5 mb-4">
-          <span class="w-9 h-9 rounded-full bg-gradient-to-br from-haldi to-spice flex items-center justify-center text-white font-serif font-bold text-lg">K</span>
+          <img src="logo.png" alt="Kulcha Theka Logo" class="w-10 h-10 rounded-full border border-cream/20 bg-white">
           <span class="font-serif text-2xl font-semibold text-cream">Kulcha Theka</span>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-cream/60 mb-6">Authentic Amritsari-style stuffed kulchas, chole, bhature & tikki — pure vegetarian, freshly prepared and full of Punjabi heart.</p>
